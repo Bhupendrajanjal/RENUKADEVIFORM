@@ -145,13 +145,16 @@ const onStdAdd=(eve)=>{
     cl(stdobj)
     stdArray.push(stdobj)
     
-    
     Swal.fire({
-        icon:"Delete",
-        title : "ADD Student Successfully ",
-        timer : 5000,  
-        
-    }) 
+        title: 'SucessFully Added',
+        imageUrl: 'https://previews.123rf.com/images/krisdog/krisdog1705/krisdog170500006/77394308-a-cartoon-emoji-icon-emoticon-looking-very-happy-with-his-two-thumbs-up.jpg',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+
+
+
     nostdData.innerHTML = `No of Student Are ${stdArray.length}`
     eve.target.reset();
     stdTable.classList.remove('d-none');
@@ -189,11 +192,13 @@ const onstdInfoUpdate = (eve1)=>{
             break;
         }    
     }   Swal.fire({
-        icon:"success",
-        title : "Update Student Success",
-        timer : 2000,  
-        
-    }) 
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThSWAcvtsxFeIkHrxwm8N5dmfYZqDUmJLxefU9l8UADYCUZoZAZViqS51c0F3NoNP_-_E&usqp=CAU"
+,        imageHeight: 200,
+        imageWeight:200,
+        title:"Update Student SuccessFully",
+        imageAlt: 'A tall image',
+        timmer:3000,
+      },3000);
     
     localStorage.setItem("stdData",JSON.stringify(stdArray));
     trTemplating(stdArray);
